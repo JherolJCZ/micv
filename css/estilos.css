@@ -1,0 +1,828 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+
+/* em, es el tamaño relativo a la fuente que elijan */
+h1 {font-size: 3.5em;}
+
+h2 {font-size: 2.7em;}
+
+h3 {font-size: 2em;}
+
+p {font-size: 1.25em;}
+
+ul {list-style: none;}
+
+li {font-size: 1.25em;}
+
+
+/*
+Para darle color a parte del texto y con la etiqueta 
+<span class="color-texto"><span/>
+lo envolvemos en el html para especificar la parte a dar color.
+*/
+.color-texto{
+    color: rgb(0, 149, 218);
+}
+
+button {
+    
+    font-size: 1.5em;
+
+     /* Poner en negrita */
+    font-weight: bold;
+
+    /* padding es primer pixel es para arriba y el segundo para los costado */
+    padding: 10px 20px;
+
+    border-radius: 10px;
+
+    /*border-- el el 1px es para el grosor y al final el 0.5, es para un poco transparente. */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+
+    /* sombra-- box-shadow--- el primer pixel es para la posición "x", luego para "y" y el último para expansión de sombra. */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: rgb(0, 149, 218);
+}
+
+button a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+/*Para cuando se pase el cursor cambie de color*/
+button:hover {
+    background-color: rgb(0, 109, 160);
+}
+
+/*Contenedor para ajustar los anchos máximos*/
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    background-color: rgb(245, 245, 245);
+}
+
+header .container .imglogo{
+    background-image: url("imgcss/img-principal.png");
+    padding: 25px 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    margin-top: 20px;
+}
+
+header .container .imglogo:hover{
+    background-image: url("imgcss/img-principal.png");
+    padding: 20px 25px;
+    margin: 5px;
+}
+
+
+
+/*--------------------------------------EXCEL---------------------------------*/
+
+
+.imgExcel{
+    background-image: url("imgcss/Excel.png");
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+}
+
+.imgExcel:hover{
+    background-image: url("imgcss/Excel.png");
+    width: 90px;
+    height: 90px;
+    margin: 25px;
+}
+
+/*------------------------------------------------------------------------------*/
+
+
+
+header .logo {
+    margin: 0;
+    padding/*relleno*/: 25px /*vertical*/ 30px /*costados*/;
+    font-weight: bold;
+    color: rgb(0, 149, 218);
+    font-size: 1.6em;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(0, 149, 218);
+}
+
+#portada{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    /* "vh" -- Altura relativa, va cambiando según la altura de tu pantalla. */
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("imgcss/img-por.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+}
+
+#portada h1{
+    color: white;
+}
+
+#portada button{
+    font-size: 1.75em;
+}
+
+#portada h3{
+    color:white;
+}
+
+#somos .container{
+    text-align: center;
+    padding: 200px 12px ;
+}
+
+#programas{
+background-color: rgb(30,30,30);
+color: white;
+text-align: center;
+}
+
+#programas .container{
+padding: 150px 12px;
+}
+
+#programas h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+
+/*
+#programas p{
+    display: none; ---------------------- PARA OCULTAR LOS PÁRRAFOS --------------------------
+}
+*/
+
+
+/*-----------------------------OCULTAR SEPARADOR EN MÓVILE - Más abajo conf. con separador visible -------------*/
+header .container .separador{
+    display: none; 
+}
+
+
+#programas .subpro{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+
+}
+
+/* 
+Selecciona solo el primer elemento: 
+    .subpro:first-child{ 
+Este para los demás:
+    .subpro:nth-child(2){
+*/
+.subpro:first-child{   
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("imgcss/img-pro1.jpg");
+}
+
+.subpro:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("imgcss/img-pro2.jpg");
+}
+
+.subpro:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("imgcss/img-pro3.jpg");
+}
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#aplica{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30,30,30);
+    color: white;
+    /*altura 80 viu hay para que ocupe el 80% de la pantalla.*/
+    height: 80vh;
+}
+
+/* el vw, permite que el tamaño del texto aumente o reduzca según el 
+tamaño de la pantalla */
+
+#aplica h2{
+    font-size: 9vw;
+}
+
+#aplica button{
+    font-size: 5vw;
+}
+
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .container{
+height: 150px;
+display:flex;
+justify-content: center;
+align-items: flex-end;
+}
+
+
+
+#somos .img2{
+    background-image: url("imgcss/img-somos.jpg");
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    }
+
+
+/*---------------- AHORA PARA CUANDO EL ANCHO DE LA PANTALLA SUPERE LOS 720PX, 
+PARA DESTOC*/
+
+@media (min-width: 720px){
+header{
+    position: fixed;
+    width: 100%;
+}
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+}
+
+
+/*-------------------------PARA MOSTRAR LOS SEPARADORES CUANDO LA PANTALLA SUPERE 720PX------*/
+
+header .container .separador{
+    display: flex; 
+}
+/*---------------------------------------------------------------------------------------*/
+
+header .container .imglogo{
+    margin-top: 0px;
+    left: 50px;
+}
+
+
+
+header nav{
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+}
+
+#portada h1{
+    font-size: 3em;
+}
+
+
+/* En lugar de center, elegimos: "space-evenly", 
+para que todos se separen de forma igual en los margen. */
+#somos .container{
+display: flex;
+justify-content: space-evenly;
+
+}
+
+#somos h2{
+    margin-top: 0px;
+}
+
+#somos .img2{
+    background-image: url("imgcss/img-somos.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+    border-radius: 0%;
+    }
+
+#somos .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+/*     padding: 0px 30px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#programas .todosubpro{
+    display: flex;
+    justify-content: center;
+}
+
+#programas p{
+    display: block;
+    margin-bottom: 30px;
+}
+
+#programas h3{
+    margin-top: 0;
+}
+
+#programas .subpro{
+    padding: 50px;
+}
+/*--------------------------------------------------------------------------------------------------------*/
+
+#caracteristicas{
+background-image: url("imgcss/img-carac.png");
+background-repeat: no-repeat;
+background-size: 400px 400px;
+background-position: calc(90vw - 500px) 120px;
+}
+
+#caracteristicas .container{
+    text-align: initial;
+}
+
+#caracteristicas{
+    margin-left: 100px;
+}
+
+#aplica h2{
+font-size: 5em;
+}
+
+#aplica button{
+font-size: 2em;
+}
+
+footer .container{
+justify-content: flex-end;
+}
+
+}
+
+@media (min-width: 1100px){
+#caracteristicas{
+    background-position-x: calc(100vw - 800px);
+
+}
+}
+
+
+
+
+element.style {
+    display: inline;
+}
+
+/*CODIFICANDO EL BOTÓN DE RETORNO ARRIBA*/
+
+#toTopHover {
+    background: url("imgcss/ui.totop.png") no-repeat left -51px;
+    width: 51px;
+    height: 51px;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+
+#toTop {
+    display: none;
+    z-index: 1!important;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    overflow: hidden;
+    width: 51px;
+    height: 51px;
+    border: none;
+    text-indent: 100%;
+    background: url("imgcss/ui.totop.png") no-repeat left top;
+}
+
+
+
+
+
+
+
+/*VENTANA EMERGENTE*/
+
+
+
+
+
+/*:::Boton-Modal:::*/
+
+
+/*#VentanaE .btnAbrir{
+
+    padding: 40px; -----------------NO ES NECESARIO MARGEN YA QUE HAY MARGEN EN TODA LA VENTANA----
+}*/
+
+
+#VentanaE .btnAbrir label{
+    padding: 10px 15px;
+    background-color: rgb(0, 149, 218);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+#VentanaE .btnAbrir label:hover{
+    background-color: rgb(0, 109, 160);
+}
+
+/*@media screen and (max-width:800px) {
+    .container{
+        width: 90%;
+    }
+}*/
+
+
+/*:::Fin Boton-Modal:::*/
+
+
+
+
+
+
+/*:::Ventana Modal:::*/
+
+#VentanaE{
+color: black
+}
+
+
+/*:::------------------------------Ventana Modal 1--------------------------:::*/
+
+#VentanaE #btn-modal{
+    display: none;
+}
+
+#VentanaE #Ventana{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#VentanaE #btn-modal:checked ~ #Ventana{
+    display: flex;
+}
+#VentanaE .container{
+    width: 100%;
+    max-width: 500px;
+    padding: 14px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+#VentanaE .container h2{
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+#VentanaE .container h3{
+    margin-bottom: 15px;
+    font-size: 0.7em;
+}
+
+#VentanaE .container p{
+
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+#VentanaE .container .btn-cerrar{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+#VentanaE .container .btn-cerrar label{
+    padding: 7px 10px;
+    background-color: rgb(0, 149, 218);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+#VentanaE .container .btn-cerrar label:hover{
+    background-color:rgb(0, 109, 160);
+}
+#VentanaE .cerrar-modal{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+}
+
+
+
+
+
+/*:::Fin Ventana Modal:::*/
+
+
+
+/*:::------------------------------Ventana Modal 2--------------------------:::*/
+
+#VentanaE #btn-modal2{
+    display: none;
+}
+
+#VentanaE #Ventana{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#VentanaE #btn-modal2:checked ~ #Ventana{
+    display: flex;
+}
+#VentanaE .container{
+    width: 100%;
+    max-width: 800px;
+    padding: 14px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+#VentanaE .container h2{
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+#VentanaE .container h3{
+    margin-bottom: 15px;
+    font-size: 0.7em;
+}
+#VentanaE .container p{
+
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+#VentanaE .container .btn-cerrar{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+#VentanaE .container .btn-cerrar label{
+    padding: 7px 10px;
+    background-color: rgb(0, 149, 218);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+#VentanaE .container .btn-cerrar label:hover{
+    background-color:rgb(0, 109, 160);
+}
+#VentanaE .cerrar-modal{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+}
+
+
+/*:::Fin Ventana Modal:::*/
+
+
+
+
+
+/*:::------------------------------Ventana Modal 3--------------------------:::*/
+
+#VentanaE #btn-modal3{
+    display: none;
+}
+
+#VentanaE #Ventana{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#VentanaE #btn-modal3:checked ~ #Ventana{
+    display: flex;
+}
+#VentanaE .container{
+    width: 100%;
+    max-width: 800px;
+    padding: 14px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+#VentanaE .container h2{
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+#VentanaE .container h3{
+    margin-bottom: 15px;
+    font-size: 0.7em;
+}
+#VentanaE .container p{
+
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+#VentanaE .container .btn-cerrar{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+#VentanaE .container .btn-cerrar label{
+    padding: 7px 10px;
+    background-color: rgb(0, 149, 218);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+#VentanaE .container .btn-cerrar label:hover{
+    background-color:rgb(0, 109, 160);
+}
+#VentanaE .cerrar-modal{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+}
+
+
+/*:::Fin Ventana Modal:::*/
+
+
+
+
+
+
+
+
+
+/*-----------------------------IMÁGENES PRODUCTOS--------------------------*/
+
+#productos h2{
+    font-size: 10px;
+}
+
+#productos img{
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    border-top-left-radius: 10px;
+    transition: all .5s;
+}
+
+#productos .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#productos .pro{
+    border-radius: 10px;
+    text-align: center;
+}
+
+#productos .pro:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.20);   
+}
+
+#productos figure{
+    overflow: hidden;
+}
+
+#productos .pro:hover img{
+    transform: scale(1.2);   
+}
+
+#productos .info-pro{
+    padding: 15px 30px;
+
+    /*interlineado*/
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/*
+
+BOTÓN NO REQUERIDO
+
+#productos .info-pro button{
+border: none;
+background: none;
+background-color: black;
+color: white;
+padding: 5px 10px;
+cursor: pointer;
+}
+*/
